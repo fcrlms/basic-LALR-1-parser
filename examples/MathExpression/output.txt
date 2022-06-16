@@ -1,0 +1,58 @@
+Input:
+-5+(4*5/3+2)/(2+2*0)-2
+
+[Accepted] Input belongs to given CFG
+
+Rightmost derivation:
+S0
+S
+- Expr
+- Term + Expr
+- Term + Term - Expr
+- Term + Term - Term
+- Term + Term - Factor
+- Term + Term - Digits
+- Term + Term - Num
+- Term + Term - 2
+- Term + Factor / Term - 2
+- Term + Factor / Factor - 2
+- Term + Factor / ( S ) - 2
+- Term + Factor / ( Expr ) - 2
+- Term + Factor / ( Term + Expr ) - 2
+- Term + Factor / ( Term + Term ) - 2
+- Term + Factor / ( Term + Factor * Term ) - 2
+- Term + Factor / ( Term + Factor * Factor ) - 2
+- Term + Factor / ( Term + Factor * Digits ) - 2
+- Term + Factor / ( Term + Factor * Num ) - 2
+- Term + Factor / ( Term + Factor * 0 ) - 2
+- Term + Factor / ( Term + Digits * 0 ) - 2
+- Term + Factor / ( Term + Num * 0 ) - 2
+- Term + Factor / ( Term + 2 * 0 ) - 2
+- Term + Factor / ( Factor + 2 * 0 ) - 2
+- Term + Factor / ( Digits + 2 * 0 ) - 2
+- Term + Factor / ( Num + 2 * 0 ) - 2
+- Term + Factor / ( 2 + 2 * 0 ) - 2
+- Term + ( S ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Expr ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Term + Expr ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Term + Term ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Term + Factor ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Term + Digits ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Term + Num ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Term + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Factor * Term + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Factor * Factor / Term + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Factor * Factor / Factor + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Factor * Factor / Digits + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Factor * Factor / Num + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Factor * Factor / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Factor * Digits / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Factor * Num / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Factor * 5 / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Digits * 5 / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( Num * 5 / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- Term + ( 4 * 5 / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- Factor + ( 4 * 5 / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- Digits + ( 4 * 5 / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- Num + ( 4 * 5 / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
+- 5 + ( 4 * 5 / 3 + 2 ) / ( 2 + 2 * 0 ) - 2
